@@ -15,5 +15,25 @@
         <%= render @microposts %>
       </ol>
     <% end %>
+    
+    <p>Address：　<%= @user.email %></p>
+    <p>Region：　<%= @user.region %></p>
+    <p>Profile：　<%= @user.profile %></p>
+
+    
+<!--<h1>-->
+<!--  <%= gravatar_for @user %>-->
+<!--  <%= @user.name %>-->
+<!--</h1>-->
+
+<!--<div class="panel panel-info">-->
+<!--  <div class="col-md-6 col-md-offset-3 panel-heading">-->
+<!--    <p><%= @user.name %></p>-->
+<!--  </div>-->
+<!--  <div class="col-md-6 col-md-offset-3 panel-body">-->
+<!--    <p>アドレス：　<%= @user.email %></p>-->
+<!--    <p>地域：　<%= @user.region %></p>-->
+<!--    <p>プロフィール：　<%= @user.profile %></p>-->
+
   </div>
 </div>

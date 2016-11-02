@@ -4,6 +4,8 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <span><%= path_follower(@user.id) %></span>
+        <span><%= path_followed(@user.id) %></span>
       </h1>
     </section>
   </aside>
@@ -16,9 +18,9 @@
       </ol>
     <% end %>
     
-    <p>Address：　<%= @user.email %></p>
-    <p>Region：　<%= @user.region %></p>
-    <p>Profile：　<%= @user.profile %></p>
+      <p>Address：　<%= @user.email %></p>
+      <p>Region：　<%= @user.region %></p>
+      <p>Profile：　<%= @user.profile %></p>
 
     
 <!--<h1>-->

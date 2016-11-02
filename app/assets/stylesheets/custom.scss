@@ -178,3 +178,31 @@ aside {
     margin-bottom: 5px;
   }
 }
+
+span.picture {
+  margin-top: 10px;
+  input {
+    border: 0;
+  }
+}
+
+/* folllwer&followed */
+
+.follow_users {
+  list-style: none;
+  padding: 0;
+  li {
+    border-top: 2px solid #E8E8E8;
+    padding: 10px 0px 10px 0px;
+    margin: 40px 0 40px 0px;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}

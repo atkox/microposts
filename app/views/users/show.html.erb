@@ -4,6 +4,11 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <% if @user.image? %>
+          <%= image_tag @user.image.thumb.url %>
+        <% else %>
+          <%= image_tag 'noimage.gif' %>
+        <% end %>
       </h1>
     </section>
   </aside>
@@ -13,12 +18,13 @@
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
         <%= render @microposts %>
+        <%= paginate(@microposts) %>
       </ol>
     <% end %>
     
-    <p>Address：　<%= @user.email %></p>
-    <p>Region：　<%= @user.region %></p>
-    <p>Profile：　<%= @user.profile %></p>
+    <!--<p>Address：　<%= @user.email %></p>-->
+    <!--<p>Region：　<%= @user.region %></p>-->
+    <!--<p>Profile：　<%= @user.profile %></p>-->
 
     
 <!--<h1>-->

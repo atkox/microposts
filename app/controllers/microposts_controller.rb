@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  before_action :logged_in_user, only: [:create]
+  before_action :logged_in_user, only: [:create,:destroy]
 
   def create
     @micropost = current_user.microposts.build(micropost_params)
@@ -8,6 +8,7 @@ class MicropostsController < ApplicationController
       redirect_to root_url
     else
       @feed_items = current_user.feed_items.includes(:user).order(created_at: :desc)
+      @feed_items = Micropost.page(params[:page]).per(5).order('id DESC')   
       render 'static_pages/home'
     end
   end

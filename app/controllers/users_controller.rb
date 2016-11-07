@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show # 追加
    @user = User.find(params[:id])
    @microposts = @user.microposts.order(created_at: :desc)
+   @microposts = Micropost.page(params[:page]).per(5).order('id DESC')
   end
 
   
@@ -59,6 +60,10 @@ class UsersController < ApplicationController
   
   def my_user
     @user==current_user
+  end
+  
+  def user_params
+    params.require(:user).permit(:name, :description, :image)
   end
   
 end

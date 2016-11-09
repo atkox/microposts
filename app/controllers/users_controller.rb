@@ -51,7 +51,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name,:email,:region,:profile,:password,:password_confirmation)
+    params.require(:user).permit(:name,:email,:region,:profile,:password, :password_confirmation, :description, :image)
   end
   
   def set_user
@@ -60,10 +60,6 @@ class UsersController < ApplicationController
   
   def my_user
     @user==current_user
-  end
-  
-  def user_params
-    params.require(:user).permit(:name, :description, :image)
   end
   
 end

@@ -53,3 +53,4 @@ end
 
 gem 'carrierwave'
 gem 'rmagick'
+

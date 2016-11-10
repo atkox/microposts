@@ -53,5 +53,6 @@ end
 
 gem 'carrierwave'
 gem 'rmagick'
+gem 'cloudinary'
 
 gem 'rails_12factor', group: :production
